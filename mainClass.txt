@@ -1,0 +1,45 @@
+package controller;
+
+import java.util.Scanner;
+import service.usedCarService;
+
+public class mainClass {
+	
+	public static void menuWhlie() {
+		usedCarService ucs = new usedCarService();
+		DB_Connection db = new DB_Connection();
+		int choice = 0;
+		boolean login = false;
+		
+		Scanner sc = new Scanner(System.in);
+		while (true) {
+			menuClass.menu();
+			choice = sc.nextInt();
+			if (choice == 1) {
+				userClass.userMenu();
+				choice = sc.nextInt();
+				if (choice == 1) {
+					menuClass.searchType();
+				} else if (choice == 2) {
+					
+				} else if (choice == 3) {
+					mainClass.menuWhlie();
+				}
+			} else if (choice == 2) {
+			} else if (choice == 3) {
+				if(login==false) {
+					login=ucs.login(login);
+				}else if(login==true){
+					System.out.println("로그인 완료");
+
+				}
+			} else if (choice == 4) {
+				break;
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		mainClass.menuWhlie();
+	}
+}
