@@ -21,7 +21,7 @@ nav {
 }
 
 section {
-	width: 1000px;
+	width: 1200px;
 	text-align: left;
 	float: left;
 	padding: 10px;
