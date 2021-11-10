@@ -2,8 +2,7 @@
 <%@ page import="java.sql.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
-// 단위표기를 위한 jstl 라이브러리 호출
-// lib파일에 jstl 1.2 첨부해야 정상적으로 출력됩니다.
+
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +14,6 @@ header {
 	background-color: #FFD9EC;
 	height: 100px;
 }
-
 nav {
 	background-color: #339999;
 	color: white;
@@ -23,40 +21,33 @@ nav {
 	height: 1500px;
 	float: left;
 }
-
 section {
 	width: 1200px;
 	text-align: left;
 	float: left;
 	padding: 10px;
 }
-
 footer {
 	background-color: #FF6347;
 	height: 100px;
 	clear: both;
 }
-
 header, nav, footer {
 	text-align: center;
 }
-
 header, footer {
 	line-height: 100px;
 }
-
 nav {
 	
 }
-
 table {
 	width: 1000px
 }
-	
 table,th,td{
 border:1px solid black;
 border-collapse:collapse;
-}	
+}
 </style>
 </head>
 <body>
@@ -117,9 +108,7 @@ border-collapse:collapse;
 			<th width=100px>주행거리</th>
 			<th width=70px>연료종류</th>
 			<th width=70px>색상</th>
-		</tr>
-	</table>
-	<br>
+			
 	<%!
 	private Connection con = null;
 	private Statement st = null;
@@ -174,6 +163,9 @@ border-collapse:collapse;
 				e.printStackTrace();
 			}
 		%>
+		</tr>
+	</table>
+	<br>
 		</article>
 	</section>
 	<footer>
