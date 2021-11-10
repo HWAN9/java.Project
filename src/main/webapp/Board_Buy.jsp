@@ -103,15 +103,15 @@ table {
 	
 	<table border="1">
 		<tr>
-			<th>차량번호</th>
-			<th>차종</th>
+			<th width=100px>차량번호</th>
+			<th width=50px>차종</th>
 			<th>차량명</th>
-			<th>제조사</th>
-			<th>가격</th>
-			<th>연식</th>
-			<th>주행거리</th>
-			<th>연료종류</th>
-			<th>색상</th>
+			<th width=70px>제조사</th>
+			<th width=70px>가격</th>
+			<th width=70px>연식</th>
+			<th width=100px>주행거리</th>
+			<th width=70px>연료종류</th>
+			<th width=70px>색상</th>
 		</tr>
 	</table>
 	<br>
