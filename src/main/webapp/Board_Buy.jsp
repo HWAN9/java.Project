@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+// 단위표기를 위한 jstl 라이브러리 호출
+// lib파일에 jstl 1.2 첨부해야 정상적으로 출력됩니다.
 
 <!DOCTYPE html>
 <html>
@@ -146,9 +150,9 @@ table {
 				<th><%=car_type%></th>
 				<th><%=car_name %></th>
 				<th><%=made_company%></th>
-				<th>원</th>
-				<th><%=made_year%>년형</th>
-				<th><%=dis_driven%>km</th>
+				<th><fmt:formatNumber type="number" maxFractionDigits="3" value="${PRICE}" />만원</th>
+				<th><fmt:parseNumber value="${YEAR}" integerOnly="true" />년형</th>
+				<th><fmt:formatNumber type="number" maxFractionDigits="3" value="${DRIVEN}" />km</th>
 				<th><%=fuel_type%></th>
 				<th><%=color%></th>
 			</tr>
@@ -161,16 +165,7 @@ table {
 				e.printStackTrace();
 			}
 		%>
-			
-		검색
-		ㅇ 차종
-		    
-		ㅇ 색상
-
-		
-		
-	</article>
-	
+		</article>
 	</section>
 	<footer>
 	<h2>페이지 넘김 제작</h2>
