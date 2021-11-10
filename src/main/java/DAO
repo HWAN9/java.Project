@@ -1,0 +1,44 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class SellDAO {
+	
+	private Connection con = null;
+	private ResultSet rs = null;
+	private PreparedStatement ps = null;
+	private Statement st = null;
+	
+	
+	public SellDAO() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hocar_db?serverTimezone=UTC&useSSL=false", "root", "1234");
+			st = con.createStatement();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void insertSellList(String CarNumber, String Name, String PhoneNumber, String Email) {
+		String sql = "INSERT INTO WISHSELLLIST(wishSellUser_name, phone_num, car_number, email) VALUES(?, ?, ?, ?)";
+		
+		try {
+			ps = con.prepareStatement(sql);
+			
+			ps.setString(1, Name);
+			ps.setString(2, PhoneNumber);
+			ps.setString(3, CarNumber);
+			ps.setString(4, Email);
+			
+			ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
