@@ -40,7 +40,7 @@ footer {
 }
 
 table {
-	width: 1000px;
+	width: 1500px;
 	margin: auto;
 }
 </style>
@@ -95,9 +95,9 @@ table {
 				<th>차종</th>
 				<th>차량명</th>
 				<th>제조사</th>
-				<th>가격</th>
+				<th>가격(원)</th>
 				<th>연식</th>
-				<th>주행거리</th>
+				<th>주행거리(km)</th>
 				<th>연료종류</th>
 				<th>색상</th>
 			</thead>
@@ -107,10 +107,7 @@ table {
 				%>
 				<tr>
 					<td><%=listrs.getString("car_number")%></td>
-					<td><a
-						href="<%=request.getContextPath()%>/4.Board_View.jsp?boardNo=<%=listrs.getString("car_type")%>">
-							<%=listrs.getString("car_type")%>
-					</a></td>
+					<td><%=listrs.getString("car_type")%></td>
 					<td><%=listrs.getString("car_name")%></td>
 					<td><%=listrs.getString("made_company")%></td>
 					<td><%=listrs.getString("price")%></td>
@@ -125,8 +122,7 @@ table {
 			</tbody>
 		</table>
 		<div>
-		<br>
-			현재 페이지:
+			<br> 현재 페이지:
 			<%=currentPage%></div>
 		<%
 		int lastPage = totalRowCount / pagePerRow;
