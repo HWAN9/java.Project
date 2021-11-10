@@ -51,7 +51,8 @@ table {
 </style>
 </head>
 <body>
-<h1>HOCAR 구매페이지</h1>
+<h1>	<a href="Board_main.jsp"><img src="hocar.PNG" alt="" widtg=250px
+			height=150px /></a></h1>
 	<header>
 	<h2>판매중인 차량</h2>
 	</header>
