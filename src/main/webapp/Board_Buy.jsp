@@ -150,15 +150,15 @@ table {
 				
 			<table border = '0px'>
 			<tr>
-				<th><%=car_number%></th>
-				<th><%=car_type%></th>
+				<th width=100px><%=car_number%></th>
+				<th width=50px><%=car_type%></th>
 				<th><%=car_name %></th>
-				<th><%=made_company%></th>
-				<th><fmt:formatNumber type="number" maxFractionDigits="3" value="${PRICE}" />만원</th>
-				<th><fmt:parseNumber value="${YEAR}" integerOnly="true" />년형</th>
-				<th><fmt:formatNumber type="number" maxFractionDigits="3" value="${DRIVEN}" />km</th>
-				<th><%=fuel_type%></th>
-				<th><%=color%></th>
+				<th width=70px><%=made_company%></th>
+				<th width=70px><fmt:formatNumber type="number" maxFractionDigits="3" value="${PRICE}" />만원</th>
+				<th width=70px><fmt:parseNumber value="${YEAR}" integerOnly="true" />년형</th>
+				<th width=100px><fmt:formatNumber type="number" maxFractionDigits="3" value="${DRIVEN}" />km</th>
+				<th width=70px><%=fuel_type%></th>
+				<th width=70px><%=color%></th>
 			</tr>
 		</table>
 		
