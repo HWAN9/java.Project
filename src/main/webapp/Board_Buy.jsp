@@ -52,6 +52,11 @@ nav {
 table {
 	width: 1000px
 }
+	
+table,th,td{
+border:1px solid black;
+border-collapse:collapse;
+}	
 </style>
 </head>
 <body>
