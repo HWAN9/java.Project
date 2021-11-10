@@ -67,10 +67,10 @@ input {
 					placeholder="김철수" required>
 			</div>
 			<div>
-				<label>연락처</label> <input type="text" name="User_phone"
+				<label>연락처</label> <input type="text" name="User_phone1"
 					placeholder=010 required size=3 maxlength=3> &nbsp; <input
-					type="text" name="User_phone" placeholder=1234 required size=4
-					maxlength=4> &nbsp; <input type="text" name="User_phone"
+					type="text" name="User_phone2" placeholder=1234 required size=4
+					maxlength=4> &nbsp; <input type="text" name="User_phone3"
 					placeholder=5678 required size=4 maxlength=4><br>
 			</div>
 			<div>
