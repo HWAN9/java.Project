@@ -142,6 +142,10 @@ table {
 				int dis_driven = rs.getInt("dis_driven");
 				String fuel_type = rs.getString("fuel_type");
 				String color = rs.getString("color"); 
+				
+				request.setAttribute("PRICE", price);
+				request.setAttribute("DRIVEN", dis_driven);
+				request.setAttribute("YEAR", made_year);
 			%>
 				
 			<table border = '0px'>
