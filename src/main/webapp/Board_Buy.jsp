@@ -145,6 +145,7 @@ border-collapse:collapse;
 	listResultSet = listStatement.executeQuery();
 	%>
 	
+	<div>목록표시 수 : <%=pagePerRow%></div>
 	<table border="1">
 	<tr>
 		<th width=100px>차량번호</th>
@@ -161,6 +162,7 @@ border-collapse:collapse;
 	
 	<%
 	while (listResultSet.next()) {
+		int i = 0;
 		String car_number = listResultSet.getString("car_number");
 		String car_type = listResultSet.getString("car_type");
 		String car_name = listResultSet.getString("car_name");
@@ -185,18 +187,12 @@ border-collapse:collapse;
 			<td width=100px><fmt:formatNumber type="number" maxFractionDigits="3" value="${DRIVEN}" />km</td>
 			<td width=70px><%=fuel_type%></td>
 			<td width=70px><%=color%></td>
+			<th width=70px><%%></th> 
 		</tr>
-		
-		list
 	<%
 	}
 	%>
 	</table>
-	
-	<div>현재 페이지 : <%=currentPage%></div>
-	<div>전체행의 수 : <%=totalRowCount%></div>
-	<div>현재 페이지 : <%=currentPage%></div>
-	<div>행당 페이지 : <%=pagePerRow%></div>
 	
 	<%
 	int lastPage = totalRowCount / pagePerRow;
@@ -205,6 +201,11 @@ border-collapse:collapse;
 	}
 	%>
 	
+	</article>
+	</section>
+	<footer>
+	<div>현재 페이지 : <%=currentPage%> / 전체 페이지 : <%=totalRowCount/pagePerRow%></div>
+		
 	<div>
 	<%
 	if (currentPage > 1) {
@@ -214,11 +215,12 @@ border-collapse:collapse;
 	}
 	if (currentPage < lastPage) {
 	%>
-	<a href="<%=request.getContextPath()%>/Board_Buy.jsp?currentPage=<%=currentPage + 1 %>">다음</a>"
+	<a href="<%=request.getContextPath()%>/Board_Buy.jsp?currentPage=<%=currentPage + 1 %>">다음</a>
 	<%
 	}
 	%>
-	
+	</div>
+	</footer>
 		<%
 	} catch (Exception e) {
 	e.printStackTrace();
@@ -245,12 +247,5 @@ border-collapse:collapse;
 	}
 	}
 	%>
-	</div>
-	<br>
-		</article>
-	</section>
-	<footer>
-	<h2>페이지 넘김 제작</h2>
-	</footer>
 </body>
 </html>
