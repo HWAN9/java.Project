@@ -12,13 +12,14 @@
 <style>
 header {
 	background-color: #FFD9EC;
+	width:1800px;
 	height: 100px;
 }
 nav {
 	background-color: #339999;
 	color: white;
-	width: 350px;
-	height: 1500px;
+	width: 200px;
+	height: 900px;
 	float: left;
 }
 section {
@@ -30,6 +31,7 @@ section {
 footer {
 	background-color: #FF6347;
 	height: 100px;
+	width:1800px;
 	clear: both;
 }
 header, nav, footer {
@@ -42,7 +44,7 @@ nav {
 	
 }
 table {
-	width: 1000px
+	width: 1500px
 }
 table,th,td{
 border:1px solid black;
@@ -56,7 +58,7 @@ border-collapse:collapse;
 	<h2>판매중인 차량</h2>
 	</header>
 	<nav>
-	<h2>
+	<h4>
 		<form method="get" action="CheckboxServlet">
 			<h4>차종</h4>
 			<input type="checkbox" name="item" value="경차">경차<br> <input
@@ -91,7 +93,7 @@ border-collapse:collapse;
 				
 			<br> <input type="submit" value="검색">
 		</form>
-	</h2>
+	</h4>
 	</nav>
 	<section>
 	
@@ -204,9 +206,10 @@ border-collapse:collapse;
 	</article>
 	</section>
 	<footer>
-	<div>현재 페이지 : <%=currentPage%> / 전체 페이지 : <%=totalRowCount/pagePerRow%></div>
+	<p>현재 페이지 : <%=currentPage%> / 전체 페이지 : <%=totalRowCount/pagePerRow%>
+
 		
-	<div>
+
 	<%
 	if (currentPage > 1) {
 	%>
@@ -219,7 +222,7 @@ border-collapse:collapse;
 	<%
 	}
 	%>
-	</div>
+	</p>
 	</footer>
 		<%
 	} catch (Exception e) {
