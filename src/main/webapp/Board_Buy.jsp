@@ -53,9 +53,11 @@ border-collapse:collapse;
 </style>
 </head>
 <body>
-<h1><a href="Board_main.jsp"><img src="hocar.PNG" alt="" width=250px height=150px /></a></h1>
 	<header>
-	<h2>판매중인 차량</h2>
+
+	<a href="Board_Main.jsp"><img src="hocar.PNG" width=200px height=100px align="left"></a>
+	<h1>판매 차량 리스트</h1>
+
 	</header>
 	<nav>
 	<h4>
