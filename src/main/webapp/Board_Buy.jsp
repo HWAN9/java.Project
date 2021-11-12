@@ -194,6 +194,9 @@ border-collapse:collapse;
 			<form action="Board_Buy_Search.jsp" method="post">
 			<th width=70px>
 			<input type="hidden" name="carname" value="<%=car_number%>">
+			<input type="hidden" name="carname2" value="<%=car_name%>">
+			<input type="hidden" name="carname3" value="<%=made_company%>">
+			<input type="hidden" name="carname4" value="${PRICE}">
 			<input type="submit" value="구매하기" name="ddfde"/></th>
 			</form>
 		</tr>
