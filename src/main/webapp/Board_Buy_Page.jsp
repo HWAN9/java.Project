@@ -61,13 +61,24 @@ input {
 			<img src="hocar.PNG" width=300px height=150px>
 		</h1>
 		<div>
-			구매차량 번호 :
+			구매차량 정보<br>
 			<%
 			request.setCharacterEncoding("UTF-8");
 			String number = request.getParameter("carname");
-			out.println(number);
+			out.println("차량번호 : "+number);
+			out.print("<br>");
+			String number2 = request.getParameter("carname2");
+			out.println("차량명 : "+number2);
+			out.print("<br>");
+			String number3 = request.getParameter("carname3");
+			out.println("제조사 : "+number3);
+			out.print("<br>");
+			String number4 = request.getParameter("carname4");
+			out.println("가격 : "+number4+"만원");
 		%>
+
 		</div>
+		<br>
 
 
 		<form action="Wish_Buy_List.jsp" method="post" class="form">
