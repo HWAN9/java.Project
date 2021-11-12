@@ -191,7 +191,11 @@ border-collapse:collapse;
 			<td width=100px><fmt:formatNumber type="number" maxFractionDigits="3" value="${DRIVEN}" />km</td>
 			<td width=70px><%=fuel_type%></td>
 			<td width=70px><%=color%></td>
-			<th width=70px><%%></th> 
+			<form action="Board_Buy_Search.jsp" method="post">
+			<th width=70px>
+			<input type="hidden" name="carname" value="<%=car_number%>">
+			<input type="submit" value="구매하기" name="ddfde"/></th>
+			</form>
 		</tr>
 	<%
 	}
