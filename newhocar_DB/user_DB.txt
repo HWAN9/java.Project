@@ -1,0 +1,22 @@
+drop table user;
+
+create table user(name varchar(20),id varchar(20) primary key,pw varchar(20) not null, phone_num varchar(30) not null, address varchar(50) not null,email varchar(20),email2 varchar(20));
+
+insert into user values('김보배','qwer','1234','010-2124-9989','아무주소','asd','naver.com');
+insert into user values('김지선','asdf','1234','010-4042-3413','아무주소2','asdf','naver.com');
+insert into user values('임우종','zxcv','1234','010-9834-3567','아무주소2','zxcv','naver.com');
+insert into user values('박종민','qwert','1234','010-4323-5421','아무주소2','qwer','naver.com');
+insert into user values('김경력','asdfg','1234','010-1453-0429','아무주소2','zcxvb','gmail.com');
+insert into user values('관리자','rhksflwk','1234','010-6649-5008','아무주소2','sodeo123','naver.com');
+
+
+
+
+
+
+
+WHERE REPLACE(TEL_NUM, '-', '') LIKE '%' || #{param} || '%'
+
+
+
+

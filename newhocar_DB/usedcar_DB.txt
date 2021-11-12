@@ -1,0 +1,360 @@
+A : 현대 50 기아 50
+B : 쉐보레 삼성
+C : 쌍용 제네시스
+D :  BMW 벤츠 아우디 폭바 도요타 등등
+
+drop table usecar;
+
+
+create table usedcar(car_number varchar(30) primary key,car_type varchar(20), car_name varchar(60),made_company varchar(20), price int, made_year int(10), dis_driven int, fuel_type varchar(20), color varchar(10));
+
+
+나는 d BMW 벤츠 등등
+
+차량번호,차종,차이름,제조사,가격,연식,주행거리,연료종류,색
+
+// BMW, 벤츠
+
+insert into usedcar values('54나9016','준중형','2시리즈 액티브 투어러','BMW',2470,'2019',34828,'디젤','은색');
+insert into usedcar values('57서1251','중형','5시리즈 520d','BMW',1770,'2012',123674,'디젤','흰색');
+insert into usedcar values('15노1153','suv','x4 xDrive 20d m 스포츠','BMW',4630,'2018',59978,'디젤','흰색');
+insert into usedcar values('247오2914','중형','5시리즈 530e 럭셔리','BMW',5660,'2020',13531,'가솔린+전기','흰색');
+insert into usedcar values('251고6317','중형','5시리즈 520I 럭셔리','BMW',5140,'2020',14680,'가솔린','쥐색');
+insert into usedcar values('338부5993','중형','5시리즈 520I 럭셔리','BMW',4980,'2020',7599,'가솔린','청색');
+insert into usedcar values('17서3184','준중형','3시리즈 gt 320d 럭셔리','BMW',2990,'2017',81284,'디젤','은색');
+insert into usedcar values('340조2672','중형','5시리즈 520d 럭셔리','BMW',2870,'2018',43290,'디젤','흰색');
+insert into usedcar values('32서2585','준중형','2시리즈 액티브 투어러','BMW',2490,'2019',41461,'디젤','흰색');
+insert into usedcar values('01두7943','소형','1시리즈 118d 스포츠 스페셜','BMW',2660,'2019',17230,'디젤','흰색');
+
+insert into usedcar values('300도8779','중형','5시리즈 520i 럭셔리','BMW',5130,'2020',19958,'가솔린','흰색');
+insert into usedcar values('62거1435','준중형','2시리즈 액티브 투어러 조이','BMW',2010,'2018',55433,'디젤','쥐색');
+insert into usedcar values('49머4527','중형','5시리즈 gt 럭셔리','BMW',2580,'2014',102751,'디젤','은색');
+insert into usedcar values('60두5203','준중형','3시리즈320d M 스포츠','BMW',2840,'2017',61462,'디젤','쥐색');
+insert into usedcar values('274오7073','중형','5시리즈 520i 럭셔리','BMW',3890,'2018',56791,'가솔린','쥐색');
+insert into usedcar values('05너3076','중형','5시리즈 520d 럭셔리','BMW',4150,'2018',50665,'디젤','쥐색');
+insert into usedcar values('258라3621','준중형','3시리즈 320d 스포츠','BMW',4160,'2020',32519,'디젤','검정색');
+insert into usedcar values('39루0671','suv','x5 xDrive 30d','BMW',4360,'2015',79728,'디젤','흰색');
+insert into usedcar values('57서1251','중형','5시리즈 520d','BMW',1760,'2012',123674,'디젤','흰색');
+insert into usedcar values('01버0519','중형','5시리즈 528i m','BMW',3200,'2016',60055,'가솔린','흰색');
+
+insert into usedcar values('47도7150','중형','5시리즈 520d m 스포츠','BMW',4130,'2017',74544,'디젤','쥐색');
+insert into usedcar values('68보2624','중형','5시리즈 530d 럭셔리','BMW',4990,'2018',31882,'디젤','은색');
+insert into usedcar values('17다8799','중형','5시리즈 520d m 스포츠','BMW',3940,'2017',64075,'디젤','검정색');
+insert into usedcar values('34어0500','준중형','3시리즈 328i m 스포츠','BMW',2890,'2016',59653,'가솔린','흰색');
+insert into usedcar values('41다1172','준중형','3시리즈 320d','BMW',2630,'2017',41411,'디젤','검정색');
+insert into usedcar values('50모0595','준중형','c클래스 w205 c220d 아방가르드','벤츠',2500,'2016',86303,'디젤','쥐색');
+insert into usedcar values('262루6655','중형','e클래스 w213 e200 아방가르드','벤츠',4230,'2018',55508,'가솔린','흰색');
+insert into usedcar values('233누5866','준중형','cla클래스 c117 cla220 amg','벤츠',3150,'2019',39565,'가솔린','쥐색');
+insert into usedcar values('59로7600','대형','s클래스 w222 s600l','벤츠',7100,'2015',94086,'가솔린','검정색');
+insert into usedcar values('08노0417','대형','s클래스 w222 s400l 4matic','벤츠',6490,'2016',97717,'가솔린','쥐색');
+
+insert into usedcar values('07누2887','중형','e클래스 w213 e300 아방가르드','벤츠',4880,'2019',20996,'가솔린','검정색');
+insert into usedcar values('14나8108','대형','s클래스 w222 s500l 에디션1','벤츠',6780,'2014',99310,'가솔린','쥐색');
+insert into usedcar values('05노7261','suv','gls클래스 x166 gls500 4matic','벤츠',7120,'2017',99620,'가솔린','검정색');
+insert into usedcar values('52우8888','중형','E-클래스 W213 E400 4MATIC','벤츠',5850,'2017',32930,'가솔린','흰색');
+insert into usedcar values('14더0690','대형','s클래스 w222 s63 4matic','벤츠',8380,'2016',90652,'가솔린','검정색');
+insert into usedcar values('64우2318','준중형','c클래스 w205 c63 s amg','벤츠',6380,'2016',35960,'가솔린','흰색');
+insert into usedcar values('07모0999','대형','s클래스 w222 마이바흐 s600','벤츠',11500,'2016',985012,'가솔린','검정색');
+insert into usedcar values('47소5594','소형','a클래스 w176 a180','벤츠',1450,'2015',93032,'디젤','검정색');
+insert into usedcar values('130나7937','대형','s클래스 w222 s350 d 4matic','벤츠',11300,'2020',6945,'디젤','청색');
+insert into usedcar values('358노6770','중형','e클래스 w213 e220d 4matic','벤츠',4850,'2018',90652,'디젤','검정색');
+
+insert into usedcar values('22가5967','중형','e클래스 w212 e350 쿠페','벤츠',2650,'2014',61448,'가솔린','쥐색');
+insert into usedcar values('48라4887','준중형','c클래스 w205 c200d 쿠페','벤츠',3200,'2016',93137,'가솔린','쥐색');
+insert into usedcar values('65소2688','suv','g클래스 w463 g63 amg','벤츠',13400,'2017',36630,'가솔린','청색');
+insert into usedcar values('40다4911','대형','s클래스 w222 마이바흐 s560 4matic','벤츠',16100,'2018',46409,'가솔린','검정색');
+insert into usedcar values('24더7115','소형','a클래스 w176 a200 cdi 나이트','벤츠',1550,'2014',97806,'디젤','흰색');
+insert into usedcar values('46루3249','준중형','b클래스 w246 b220','벤츠',2600,'2018',40535,'가솔린','흰색');
+insert into usedcar values('14구5786','준중형','c클래스 w204 c200 cgi 아방가르드','벤츠',11700,'2012',107628,'가솔린','은색');
+insert into usedcar values('34부7176','suv','m클래스 w166 ml350 블루텍','벤츠',3550,'2014',98798,'디젤','흰색');
+insert into usedcar values('222수1540','준중형','cla클래스 c117 cla250 amg','벤츠',3340,'2014',17495,'가솔린','쥐색');
+insert into usedcar values('35더2126','중형','e클래스 w213 e220d 4matic','벤츠',5330,'2019',39343,'디젤','흰색');
+
+
+//삼성,쉐보레
+
+insert into usedcar values('39우0229','중형','올 뉴 말리부','쉐보레',1820,'2017',79666,'가솔린','검정색');
+insert into usedcar values('25고2230','중형','올 뉴 말리부','쉐보레',1610,'2018',23802,'가솔린','쥐색');
+insert into usedcar values('210모3201','중형','올 뉴 말리부','쉐보레',1890,'2018',45627,'가솔린','흰색');
+insert into usedcar values('262루6651','중형','올 뉴 말리부','쉐보레',1920,'2018',58223,'가솔린','검정색');
+insert into usedcar values('23수3902','중형','말리부','쉐보레',890,'2014',91135,'가솔린','검정색');
+insert into usedcar values('41모9003','중형','말리부','쉐보레',1060,'2015',97883,'가솔린','쥐색');
+insert into usedcar values('50머5389','경차','마티즈','쉐보레',380,'2010',76221,'가솔린','흰색');
+insert into usedcar values('61노8968','경차','마티즈','쉐보레',380,'2010',85553,'가솔린','검정색');
+insert into usedcar values('12거1754','경차','마티즈','쉐보레',380,'2010',88580,'가솔린','빨간색');
+insert into usedcar values('58어4341','경차','마티즈','쉐보레',470,'2011',29539,'가솔린','흰색');
+insert into usedcar values('65저4811','경차','더 뉴 스파크','쉐보레',940,'2019',43509,'가솔린','흰색');
+insert into usedcar values('108가2563','경차','더 뉴 스파크','쉐보레',940,'2021',80,'가솔린','흰색');
+insert into usedcar values('48로2438','경차','더 뉴 스파크','쉐보레',990,'2021',11635,'가솔린','빨간색');
+insert into usedcar values('66더9792','준중형','라세티','쉐보레',420,'2011',79640,'가솔린','쥐색');
+insert into usedcar values('38조1052','준중형','라세티','쉐보레',460,'2010',77462,'가솔린','검정색');
+insert into usedcar values('14무0531','SUV','캡티바','쉐보레',970,'2015',101041,'디젤','흰색');
+insert into usedcar values('51부0356','SUV','더 뉴 트랙스','쉐보레',1520,'2017',43136,'가솔린','흰색');
+insert into usedcar values('64수2014','SUV','트랙스','쉐보레',1130,'2014',35088,'가솔린','은색');
+insert into usedcar values('47보5791','SUV','트랙스','쉐보레',900,'2015',74198,'가솔린','흰색');
+insert into usedcar values('294두9462','SUV','트레일블레이저','쉐보레',2730,'2021',2173,'가솔린','흰색');
+insert into usedcar values('03저2247','SUV','더 뉴 트랙스','쉐보레',1290,'2017',86990,'디젤','쥐색');
+insert into usedcar values('11구4236','SUV','트랙스','쉐보레',1080,'2015',70947,'가솔린','빨간색');
+insert into usedcar values('334서1744','SUV','트래버스','쉐보레',3910,'2020',11032,'가솔린','흰색');
+insert into usedcar values('50저0883','대형','임팔라','쉐보레',1630,'2016',94507,'가솔린','검정색');
+insert into usedcar values('262루6627','대형','임팔라','쉐보레',1630,'2016',81266,'가솔린','검정색');
+insert into usedcar values('68모0440','대형','임팔라','쉐보레',1430,'2016',99564,'가솔린','검정색');
+insert into usedcar values('57부0895','대형','임팔라','쉐보레',1530,'2016',61788,'가솔린','은색');
+insert into usedcar values('19우6752','대형','알페온','쉐보레',720,'2011',79848,'가솔린','은색');
+insert into usedcar values('29도4019','준중형','올 뉴 크루즈','쉐보레',1030,'2017',60756,'가솔린','흰색');
+insert into usedcar values('18무7152','준중형','올 뉴 크루즈','쉐보레',1070,'2017',121462,'가솔린','쥐색');
+insert into usedcar values('03무5104','준중형','올 뉴 크루즈','쉐보레',1270,'2017',27423,'가솔린','흰색');
+insert into usedcar values('11로1377','준중형','뉴 SM3','삼성',780,'2014',39512,'가솔린','쥐색');
+insert into usedcar values('37모9666','준중형','뉴 SM3','삼성',530,'2011',93985,'가솔린','검정색');
+insert into usedcar values('06가7759','준중형','SM3','삼성',930,'2017',40233,'가솔린','흰색');
+insert into usedcar values('42고2431','준중형','SM3','삼성',710,'2011',80144,'가솔린','은색');
+insert into usedcar values('25무0968','준중형','SM3','삼성',750,'2016',72581,'가솔린','흰색');
+insert into usedcar values('23더0361','준중형','SM3','삼성',950,'2016',43715,'가솔린','흰색');
+insert into usedcar values('35서0344','준중형','SM3','삼성',880,'2016',61184,'가솔린','흰색');
+insert into usedcar values('55어1097','준중형','뉴 SM3','삼성',420,'2011',56893,'가솔린','검정색');
+insert into usedcar values('66거7340','준중형','뉴 SM3','삼성',520,'2010',62804,'가솔린','은색');
+insert into usedcar values('67마2246','준중형','뉴 SM3','삼성',390,'2011',119616,'가솔린','검정색');
+insert into usedcar values('45두0303','중형','SM5','삼성',1050,'2017',43740,'가솔린','은색');
+insert into usedcar values('57무7568','중형','뉴 SM5','삼성',850,'2014',28267,'가솔린','흰색');
+insert into usedcar values('62서4537','중형','뉴 SM5','삼성',500,'2011',104988,'가솔린','청색');
+insert into usedcar values('67루9891','중형','뉴 SM5','삼성',620,'2011',64649,'가솔린','흰색');
+insert into usedcar values('58오2815','중형','뉴 SM5','삼성',850,'2011',87522,'가솔린','검정색');
+insert into usedcar values('45두3915','중형','뉴 SM5','삼성',640,'2012',47530,'가솔린','은색');
+insert into usedcar values('62저7322','중형','SM5','삼성',890,'2016',83025,'LPG','검정색');
+insert into usedcar values('10조7371','중형','SM5','삼성',1370,'2018',30100,'가솔린','흰색');
+insert into usedcar values('06거7475','중형','SM5','삼성',990,'2017',48503,'가솔린','검정색');
+insert into usedcar values('63노1905','중형','SM5','삼성',1420,'2018',14175,'가솔린','은색');
+insert into usedcar values('29러0252','중형','SM5','삼성',1090,'2016',43518,'가솔린','흰색');
+insert into usedcar values('54소6945','중형','SM5','삼성',1090,'2015',107740,'LPG','흰색');
+insert into usedcar values('08거7794','중형','SM5','삼성',1370,'2018',28284,'가솔린','흰색');
+insert into usedcar values('08마9674','중형','SM5','삼성',1180,'2018',56542,'가솔린','검정색');
+insert into usedcar values('17더3864','경차','트위치','삼성',400,'2019',36,'전기','흰색');
+insert into usedcar values('54수8029','중형','SM6','삼성',1650,'2017',30243,'가솔린','쥐색');
+insert into usedcar values('53조0156','중형','SM6','삼성',1380,'2016',76983,'가솔린','검정색');
+insert into usedcar values('63도8576','중형','SM6','삼성',1680,'2017',58864,'가솔린','흰색');
+insert into usedcar values('336고5597','중형','SM6','삼성',1680,'2016',37976,'가솔린','쥐색');
+insert into usedcar values('267보5230','중형','SM6','삼성',1520,'2017',45005,'가솔린','검정색');
+insert into usedcar values('124소2559','중형','SM6','삼성',1640,'2020',45672,'LPG','흰색');
+insert into usedcar values('52소0455','중형','SM6','삼성',1320,'2016',91340,'가솔린','검정색');
+insert into usedcar values('29가0116','중형','SM6','삼성',1400,'2016',66726,'가솔린','검정색');
+insert into usedcar values('01너6974','중형','SM6','삼성',1810,'2019',39390,'가솔린','쥐색');
+insert into usedcar values('18구2489','대형','SM7','삼성',1820,'2018',44183,'가솔린','검정색');
+insert into usedcar values('36러5336','대형','SM7','삼성',1750,'2017',57584,'가솔린','흰색');
+insert into usedcar values('61거0144','대형','SM7','삼성',1580,'2017',56323,'가솔린','쥐색');
+insert into usedcar values('05너2400','대형','SM7','삼성',1370,'2017',80307,'LPG','쥐색');
+insert into usedcar values('64머0489','대형','SM7','삼성',1260,'2016',73204,'LPG','검정색');
+insert into usedcar values('184소8981','대형','SM7','삼성',1360,'2016',76248,'LPG','흰색');
+insert into usedcar values('50더0263','대형','SM7','삼성',1020,'2016',120871,'LPG','쥐색');
+insert into usedcar values('36머0423','대형','SM7','삼성',1560,'2016',44130,'가솔린','흰색');
+insert into usedcar values('49도8171','대형','SM7','삼성',1070,'2015',98230,'가솔린','쥐색');
+insert into usedcar values('40보6574','대형','SM7','삼성',1240,'2015',90630,'가솔린','검정색');
+insert into usedcar values('65도9222','대형','SM7','삼성',1350,'2015',80562,'가솔린','쥐색');
+insert into usedcar values('57거0144','대형','SM7','삼성',1550,'2017',64498,'가솔린','검정색');
+insert into usedcar values('42너0474','대형','SM7','삼성',1630,'2017',63102,'가솔린','흰색');
+insert into usedcar values('54마4178','대형','SM7','삼성',1820,'2018',58127,'가솔린','검정색');
+insert into usedcar values('50오4824','SUV','뉴 QM3','삼성',1500,'2019',45569,'디젤','빨간색');
+insert into usedcar values('50버4486','SUV','뉴 QM3','삼성',1520,'2018',41378,'디젤','검정색');
+insert into usedcar values('06거9029','SUV','뉴 QM3','삼성',1290,'2018',67243,'디젤','흰색');
+insert into usedcar values('17수5939','SUV','뉴 QM3','삼성',1560,'2018',23983,'디젤','검정색');
+insert into usedcar values('65다5974','SUV','뉴 QM3','삼성',1390,'2018',44081,'디젤','빨간색');
+insert into usedcar values('49버7050','SUV','뉴 QM3','삼성',1540,'2019',46499,'디젤','흰색');
+insert into usedcar values('384무6246','SUV','뉴 QM6','삼성',2990,'2021',12,'LPG','흰색');
+insert into usedcar values('359서5017','SUV','뉴 QM6','삼성',2820,'2021',6400,'LPG','검정색');
+insert into usedcar values('132소7577','SUV','뉴 QM6','삼성',2500,'2021',13998,'가솔린','쥐색');
+insert into usedcar values('314오7019','SUV','뉴 QM6','삼성',2790,'2021',33,'가솔린','쥐색');
+insert into usedcar values('303누1769','SUV','뉴 QM6','삼성',2920,'2021',193,'LPG','흰색');
+insert into usedcar values('357어1468','SUV','뉴 QM6','삼성',2970,'2021',6290,'LPG','검정색');
+insert into usedcar values('139서6704','SUV','뉴 QM6','삼성',2920,'2021',22,'LPG','흰색');
+insert into usedcar values('133두3115','SUV','뉴 QM6','삼성',2740,'2021',11870,'가솔린','쥐색');
+insert into usedcar values('243나9303','SUV','뉴 QM6','삼성',3310,'2021',9,'가솔린','흰색');
+insert into usedcar values('209부8550','SUV','XM3','삼성',1970,'2022',7,'가솔린','흰색');
+insert into usedcar values('264루5069','SUV','XM3','삼성',2210,'2020',32489,'가솔린','흰색');
+insert into usedcar values('115도3180','SUV','XM3','삼성',2180,'2020',17769,'가솔린','쥐색');
+insert into usedcar values('253라2808','SUV','XM3','삼성',2030,'2020',30373,'가솔린','검정색');
+insert into usedcar values('293버6170','SUV','XM3','삼성',2210,'2021',7996,'가솔린','흰색');
+insert into usedcar values('331러2753','SUV','XM3','삼성',2150,'2020',23797,'가솔린','쥐색');
+insert into usedcar values('68거5609','경차','XM3','삼성',1380,'2018',26589,'디젤','빨간색');
+
+
+//제네시스, 쌍용
+
+
+insert into usedcar values('106부4291','SUV','올 뉴 렉스턴 프레스티지','쌍용',3850,'2021',11660,'디젤','흰색');
+insert into usedcar values('228더7200','SUV','올 뉴 렉스턴 프레스티지','쌍용',3800,'2021',16223,'디젤','검정색');
+insert into usedcar values('86조2694','SUV','렉스턴 스포츠 칸 프레스티지','쌍용',3200,'2020',14463,'디젤','은색');
+insert into usedcar values('19보4273','SUV','렉스턴 W 럭셔리','쌍용',1170,'2014',110391,'디젤','검정색');
+insert into usedcar values('65노1122','SUV','G4 렉스턴 헤리티지','쌍용',2630,'2016',76333,'디젤','검정색');
+insert into usedcar values('19어7375','대형','뉴체어맨 W VIP','쌍용',1900,'2015',46963,'가솔린','검정색');
+insert into usedcar values('11루1526','대형','뉴체어맨 W VIP','쌍용',1950,'2014',52957,'가솔린','검정색');
+insert into usedcar values('22다9571','대형','뉴체어맨 W 프레스티지','쌍용',1430,'2014',64093,'가솔린','검정색');
+insert into usedcar values('161저2124','SUV','뷰티풀 코란도 플러스','쌍용',2150,'2020',19769,'가솔린','흰색');
+insert into usedcar values('272누1799','SUV','뷰티풀 코란도 판타스틱','쌍용',2170,'2019',24456,'디젤','쥐색');
+
+insert into usedcar values('83어7891','SUV','더 뉴 코란도 스포츠 익스트림','쌍용',1730,'2017',56574,'디젤','흰색');
+insert into usedcar values('92너5586','SUV','더 뉴 코란도 스포츠 비젼','쌍용',1930,'2018',45540,'디젤','쥐색');
+insert into usedcar values('92로1193','SUV','더 뉴 코란도 스포츠 클럽','쌍용',1730,'2017',40899,'디젤','쥐색');
+insert into usedcar values('63부6540','SUV','뉴코란도 C','쌍용',850,'2015',131377,'디젤','빨간색');
+insert into usedcar values('39주0927','SUV','뉴코란도 C 익스트림','쌍용',1210,'2016',47632,'디젤','쥐색');
+insert into usedcar values('24라0472','SUV','코란도 투리스모 RX','쌍용',1520,'2017',62578,'디젤','흰색');
+insert into usedcar values('129가1796','SUV','코란도 투리스모 GT','쌍용',950,'2014',107901,'디젤','빨간색');
+insert into usedcar values('04우4586','SUV','코란도 투리스모 아웃도어','쌍용',1790,'2018',38268,'디젤','쥐색');
+insert into usedcar values('258머4893','SUV','베리 뉴 티볼리 V3','쌍용',1690,'2020',13869,'가솔린','빨간색');
+insert into usedcar values('228무4608','SUV','베리 뉴 티볼리 리미티드','쌍용',2220,'2021',2865,'가솔린','은색');
+
+insert into usedcar values('28러1932','SUV','티볼리 아머 VX','쌍용',1430,'2019',34206,'가솔린','쥐색');
+insert into usedcar values('69버9147','SUV','티볼리 아머 기어 에디션','쌍용',1600,'2018',49626,'가솔린','흰색');
+insert into usedcar values('01거6377','SUV','티볼리 에어 RX','쌍용',1390,'2017',64548,'가솔린','빨간색');
+insert into usedcar values('28오0691','SUV','티볼리 에어 IX','쌍용',1390,'2016',55447,'디젤','흰색');
+insert into usedcar values('12부0667','SUV','티볼리 LX','쌍용',1320,'2016',68003,'디젤','청색');
+insert into usedcar values('25조5425','대형','제네시스 EQ900 럭셔리','제네시스',4320,'2017',58485,'가솔린','검정색');
+insert into usedcar values('190러4640','대형','제네시스 EQ900 프리미엄 럭셔리','제네시스',4400,'2018',63894,'가솔린','검정색');
+insert into usedcar values('67가0696','대형','제네시스 EQ900 프레스티지','제네시스',4800,'2016',51879,'가솔린','쥐색');
+insert into usedcar values('40거9391','중형','제네시스 G70 엘리트','제네시스',3770,'2019',24128,'디젤','청색');
+insert into usedcar values('312수3994','중형','제네시스 더 뉴 G70','제네시스',4790,'2021',91,'가솔린','쥐색');
+
+insert into usedcar values('01거1135','중형','제네시스 G70 슈프림','제네시스',3550,'2018',62039,'가솔린','빨간색');
+insert into usedcar values('258노8218','중형','제네시스 더 뉴 G70 스포츠','제네시스',5600,'2021',56,'가솔린','빨간색');
+insert into usedcar values('175소9951','대형','제네시스 G80 터보','제네시스',5740,'2021',25840,'가솔린','청색');
+insert into usedcar values('313머5655','대형','제네시스 G80 터보','제네시스',5420,'2021',22850,'가솔린','청색');
+insert into usedcar values('154우2973','대형','제네시스 G80 터보','제네시스',6690,'2021',58,'가솔린','청색');
+insert into usedcar values('120거9080','대형','제네시스 G80 터보','제네시스',6450,'2021',3674,'가솔린','흰색');
+insert into usedcar values('230루6602','대형','제네시스 G80 터보','제네시스',6830,'2021',13440,'가솔린','검정색');
+insert into usedcar values('260누4197','대형','제네시스 G80 럭셔리','제네시스',3300,'2018',72300,'가솔린','검정색');
+insert into usedcar values('54오0579','대형','제네시스 G80 럭셔리','제네시스',2460,'2017',113644,'가솔린','은색');
+insert into usedcar values('03수1493','대형','제네시스 G80 프레스티지','제네시스',4760,'2019',13934,'가솔린','쥐색');
+
+insert into usedcar values('104러5319','대형','제네시스 G90 프레스티지','제네시스',7900,'2019',43225,'가솔린','검정색');
+insert into usedcar values('17두2860','대형','제네시스 G90 프리미엄 럭셔리','제네시스',7100,'2019',45891,'가솔린','검정색');
+insert into usedcar values('65마4802','대형','제네시스 G90 프레스티지','제네시스',7480,'2019',22742,'가솔린','쥐색');
+insert into usedcar values('179도8811','대형','제네시스 G90 럭셔리','제네시스',6700,'2020',38393,'가솔린','쥐색');
+insert into usedcar values('328버5381','대형','제네시스 G90 리무진','제네시스',13150,'2021',73,'가솔린','검정색');
+insert into usedcar values('100버9310','대형','제네시스 GV70','제네시스',7000,'2021',5914,'가솔린','흰색');
+insert into usedcar values('141도4823','대형','제네시스 GV80','제네시스',7300,'2020',13514,'디젤','쥐색');
+insert into usedcar values('94노0201','SUV','렉스턴 스포츠 프레스티지','쌍용',2350,'2019',33929,'디젤','검정색');
+insert into usedcar values('81우0728','SUV','렉스턴 스포츠 노블레스','쌍용',2410,'2018',60285,'디젤','쥐색');
+insert into usedcar values('59다0374','SUV','렉스턴 W 노블레스','쌍용',1760,'2016',71918,'디젤','쥐색');
+
+//기아 현대
+
+insert into usedcar values('39도3571', '준중형', 'i30 (PD) 1.4 터보 스타일', '현대',1650,'2017',11474,'가솔린','쥐색');
+insert into usedcar values('05도5187','준중형','더 뉴 벨로스터 1.6 PYL','현대',1230,'2017',55738,'가솔린','청색');
+insert into usedcar values('172너8565','준중형','아반떼 AD 1.6 GDI 밸류 플러스','현대',1470,'2017',38519,'가솔린','쥐색');
+insert into usedcar values('02조0585','준중형','아이오닉 하이브리드 N','현대',1570,'2016',32849,'가솔린+전기','흰색');
+insert into usedcar values('124가3463','준중형','아이오닉 하이브리드 Q','현대',1490,'2018',91266,'전기','흰색');
+insert into usedcar values('28가7634','중형','i40 살룬 2.0 GDi 모던','현대',940,'2012',101003,'가솔린','쥐색');
+insert into usedcar values('15로0680','중형','더 뉴 i40 살룬 1.7 VGT 유니크','현대',1220,'2016',93915,'디젤','흰색');
+insert into usedcar values('02구6118','중형','쏘나타 뉴 라이즈 2.0 프리미엄 스페셜','현대',1890,'2017',99611,'가솔린','흰색');
+insert into usedcar values('179나6281','중형','쏘나타 뉴 라이즈 2.0 모던','현대',1750,'2018',62182,'가솔린','검정색');
+insert into usedcar values('261루1766','중형','쏘나타 DN8 하이브리드 프리미엄 패밀리','현대',2940,'2019',24461,'가솔린+전기','흰색');
+
+insert into usedcar values('31서7754','대형','그랜저 HG HG300 노블','현대',1110,'2011',83106,'가솔린','검정색');
+insert into usedcar values('29주9083','대형','그랜저 IG 2.4 프리미엄','현대',2120,'2016',55228,'가솔린','검정색');
+insert into usedcar values('186마9883','대형','그랜저 IG 3.0 익스클루시브','현대',2290,'2017',62521,'가솔린','흰색');
+insert into usedcar values('249다8104','대형','더 뉴 그랜저 가솔린 3.3 캘리그래피','현대',3990,'2020',9224,'가솔린','흰색');
+insert into usedcar values('34주7502','대형','그랜저 IG 하이브리드 익스클루시브','현대',3010,'2019',37320,'가솔린+전기','흰색');
+insert into usedcar values('132오1518','SUV','싼타페 TM 가솔린 2.0T 4WD 익스클루시브 스페셜','현대',2850,'2018',50476,'가솔린','청색');
+insert into usedcar values('42누0399','SUV','싼타페 더 프라임 디젤 2.0 2WD 1 밀리언','현대',2190,'2016',87509,'디젤','청색');
+insert into usedcar values('135나3864','SUV','더 뉴 싼타페 가솔린 2.5 4WD 캘리그래피 ','현대',4290,'2020',6182,'가솔린','쥐색');
+insert into usedcar values('39주1041','SUV','싼타페 더 프라임 디젤 2.0 2WD 밸류 플러스','현대',2230,'2018',26285,'디젤','검정색');
+insert into usedcar values('60가7325','SUV','싼타페 더 프라임 디젤 2.0 2WD 프리미엄','현대',1920,'2017',18557,'디젤','은색');
+
+insert into usedcar values('05루6187','SUV','코나 디젤 1.6 2WD 모던 테크','현대',1930,'2017',29565,'디젤','쥐색');
+insert into usedcar values('37어7130','SUV','코나 1.6 터보 2WD 프리미엄','현대',1830,'2017',84912,'가솔린','청색');
+insert into usedcar values('111구5576','SUV','코나 하이브리드 가솔린 1.6 하이브리드','현대',2590,'2020',18452,'가솔린+전기','청색');
+insert into usedcar values('307소3265','SUV','올 뉴 투싼 TL 디젤 2.0 2WD 모던','현대',1990,'2020',28632,'디젤','쥐색');
+insert into usedcar values('53러6496','SUV','팰리세이드 가솔린 3.8 4WD 프레스티지','현대',3920,'2019',26074,'가솔린','쥐색');
+insert into usedcar values('63고0700','경차','레이 디럭스 ','기아',900,'2016',43827,'가솔린','청색');
+insert into usedcar values('348고7142','경차','더 뉴 레이 프레스티지','기아',1550,'2020',9207,'가솔린','흰색');
+insert into usedcar values('47주8062','경차','올 뉴 모닝','기아',950,'2017',22153,'가솔린','흰색');
+insert into usedcar values('38수8143','경차','올 뉴 모닝 럭셔리','기아',550,'2012',86716,'가솔린','은색');
+insert into usedcar values('12도0903','경차','더 뉴 모닝 럭셔리','기아',800,'2016',25755,'가솔린','흰색');
+
+insert into usedcar values('262루6662','준중형','더 뉴 K3 트렌디','기아',1280,'2018',41733,'가솔린','쥐색');
+insert into usedcar values('289가4928','준중형','올 뉴 K3 프레스티지','기아',1690,'2018',43874,'가솔린','은색');
+insert into usedcar values('03저6183','준중형','더 뉴 K3 노블레스','기아',1480,'2017',65161,'가솔린','흰색');
+insert into usedcar values('48나1291','준중형','쏘울 부스터 1.6 T-GDI','기아',1980,'2019',38223,'가솔린','빨간색');
+insert into usedcar values('24두2398','준중형','쏘울 부스터 1.6 T-GDI 노블레스','기아',1830,'2019',17178,'가솔린','청색');
+insert into usedcar values('262루6631','중형','더 뉴 K5 2세대 2.0 프레스티지','기아',2090,'2019',20112,'가솔린','청색');
+insert into usedcar values('185소7437','중형','더 뉴 K5 2세대 2.0 LPI 프레스티지','기아',1810,'2018',45189,'LPG','흰색');
+insert into usedcar values('32저2922','중형','더 뉴 K5 럭셔리 트랜디','기아',1240,'2015',42222,'가솔린','은색');
+insert into usedcar values('386주7408','중형','스팅어 3.3 터보 AWD GT','기아',3450,'2018',45530,'가솔린','검정색');
+insert into usedcar values('291소3211','중형','스팅어 3.3 터보 AWD GT','기아',3800,'2020',18843,'가솔린','빨간색');
+
+insert into usedcar values('39서4467','대형','올 뉴 K7 2.4 GDI 프레스티지','기아',1530,'2017',119550,'가솔린','은색');
+insert into usedcar values('19다7693','대형','더 뉴 K7 3.0 GDI 프레스티지','기아',1360,'2015',88404,'가솔린','검정색');
+insert into usedcar values('163저1264','대형','올 뉴 K7 3.3 GDI 노블레스 스페셜','기아',2130,'2016',43242,'가솔린','검정색');
+insert into usedcar values('316소1633','대형','K8 가솔린 3.5 2WD 시그니처','기아',4810,'2021',6081,'가솔린','청색');
+insert into usedcar values('55주4470','대형','K9 3.3 GDI 이그제큐티브','기아',2130,'2014',81974,'가솔린','검정색');
+insert into usedcar values('368주5897','SUV','더 뉴 니로 노블레스 스폐셜','기아',2600,'2020',34383,'가솔린+전기','쥐색');
+insert into usedcar values('14저7292','SUV','모하비 4WD KV300','기아',1970,'2014',120326,'디젤','검정색');
+insert into usedcar values('346어2242','SUV','셀토스 가솔린 터보 1.6 2WD 노블레스','기아',2740,'2020',7328,'가솔린','흰색');
+insert into usedcar values('04수3143','SUV','스포티지 더 볼드 디젤 2.0 2WD 노블레스','기아',2410,'2019',17507,'디젤','흰색');
+insert into usedcar values('18어6976','SUV','올 뉴 쏘렌토 디젤 2.0 4WD 노블레스 스페셜','기아',2270,'2015',41860,'디젤','쥐색');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+오버라이딩하면 한종류에 따라 여러개 선택가능하지않나..

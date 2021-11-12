@@ -1,0 +1,14 @@
+drop table wishbuylist;
+
+
+create table wishBuyList(wishBuyUser_name varchar(20),id varchar(20),phone_num varchar(20) not null ,car_number varchar(30)not null, email varchar(20),email2 varchar(20));
+
+insert into wishBuyList values('김보배','qwer','010-2124-9989','01거1135','asd','naver.com');
+insert into wishBuyList values('박종민','qwert','010-4323-5421','03저2247','qwer','naver.com');
+insert into wishBuyList values('임우종','zxcv','010-9834-3567','01거1135','zxcv','naver.com');
+insert into wishBuyList values('김지선','asdf','010-0913-0156','05노7261','asdf','naver.com');
+insert into wishBuyList values('김경력','asdfg','010-1453-0429','07누2887','zcxvb','gmail.com');
+
+
+
+
