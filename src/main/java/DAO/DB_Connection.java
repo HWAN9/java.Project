@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import DTO.SellVO;
 
 public class DB_Connection {
-	
+
 	private ArrayList<SellVO> dtos;
 	Connection con = null;
 	Statement st = null;
@@ -27,8 +27,8 @@ public class DB_Connection {
 				e.printStackTrace();
 			}
 		}
-		
-		public void insertSellList(String CarNumber, String Name, String PhoneNumber, String Email) {			
+//		WishSellList 삽입
+		public void insertWishSellList(String CarNumber, String Name, String PhoneNumber, String Email) {			
 			try {
 				ps = con.prepareStatement("INSERT INTO WISHSELLLIST(wishSellUser_name, phone_num, car_number, email) VALUES(?, ?, ?, ?)");
 				
@@ -42,7 +42,7 @@ public class DB_Connection {
 				e.printStackTrace();
 			}
 		}
-		
+//		사용자 검색 목록에 부합하는 데이터만 담는 SearchList 삽입
 		public void insertSearchList(String carNumber, String carType, String carName, String carCompany, int carPrice, double carYear, int carDriven,
 				String carFuel, String carColor) {			
 			try {
@@ -64,7 +64,25 @@ public class DB_Connection {
 				e.printStackTrace();
 			}
 		}
+//		WishBuyList 삽입
+		public void insertWishBuyList(String userName, String id, String phoneNum, String carNumber, String email) {			
+			try {
+				ps = con.prepareStatement("INSERT INTO WISHBUYLIST(WISHBUYUSER_NAME, ID, PHONE_NUM" +
+						",CAR_NUMBER, EMAIL) VALUES (?, ?, ?, ?, ?)");
+				
+				ps.setString(1, userName);
+				ps.setString(2, id);
+				ps.setString(3, phoneNum);
+				ps.setString(4, carNumber);
+				ps.setString(5, email);
+				
+				ps.executeUpdate();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		
+//		사용자 검색 목록 TABLE 삭제 -> 초기화목적
 		public void truncateSearchList() {
 			try {
 				ps = con.prepareStatement("TRUNCATE SEARCHLIST");
@@ -75,6 +93,7 @@ public class DB_Connection {
 			}
 		}
 		
+//		전체 차량목록을 담는 ArrayList
 		public ArrayList<SellVO> searchCar(){
 			dtos = new ArrayList<SellVO>();
 			
