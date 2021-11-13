@@ -16,16 +16,16 @@ width:350px;
 <body>
 <img src="hocar.PNG"><br>
 
-<form ACTION="Buy_Board.jsp">
-<button onclick="location='Board_Buy_Page.jsp'">구매</button>
+<form ACTION="Board_Buy_Page.jsp">
+<button>구매</button>
 </form>
 
-<form ACTION="Sell_Board.jsp">
-<button onclick="location='Board_Sell_Page.jsp'">판매</button>
+<form ACTION="Board_Sell_Page.jsp">
+<button>판매</button>
 </form>
 
 <form ACTION="Login_Board.jsp">
-<button onclick="location='Login_Board.jsp'">로그인</button>
+<button>로그인</button>
 </form>
 </body>
 </html>
