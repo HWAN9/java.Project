@@ -156,6 +156,7 @@ for(int i = 0; i < bucket4.size(); i++){
 	<nav>
 		<h4>
 			<form method="get" action="Board_Buy_Search.jsp">
+			<%!int currentPage1 = 1;%>
 				<h4>차종</h4>
 				<input type="checkbox" name="type" value="경차">경차
 				<br>
@@ -230,6 +231,7 @@ for(int i = 0; i < bucket4.size(); i++){
 				<input type="checkbox" name="color" value="파란색">
 				파란색
 				<br>
+						<input type="hidden" value="<%=currentPage1 = 1%>">
 						<input type="submit" value="검색">
 				</form>
 		</h4>
@@ -237,19 +239,19 @@ for(int i = 0; i < bucket4.size(); i++){
 	
 	<section>
 	
-	<%!
-	private Connection con = null;
+		<%!private Connection con = null;
 	private Statement st = null;
 	private ResultSet rs = null;
 	Connection connection = null;
 	PreparedStatement totalStatement = null;
 	PreparedStatement listStatement = null;
 	ResultSet totalResultSet = null;
-	ResultSet listResultSet = null;
+	ResultSet listResultSet = null;%>
 
-	int currentPage1 = 1;
-	int totalRowCount1 = 0;%>
-
+	<%!
+	int totalRowCount1 = 0;
+	%>
+	
 	<%
 	if (request.getParameter("currentPage1") != null) {
 		currentPage1 = Integer.parseInt(request.getParameter("currentPage1"));
@@ -258,6 +260,7 @@ for(int i = 0; i < bucket4.size(); i++){
 	String dbUrl = "jdbc:mysql://127.0.0.1:3306/hocar_db?serverTimezone=UTC&useSSL=false";
 	String dbUser = "root";
 	String dbPw = "1234";
+	
 	%>
 
 
@@ -286,10 +289,32 @@ for(int i = 0; i < bucket4.size(); i++){
 		%>
 		
 		
-		<script>
+		<%
+		String strType, strCompany, strFuel, strColor = "";
+		String searchType, searchCompany, searchFuel, searchColor = "";
 		
-		</script>
-		<p>선택한 조건 : </p>
+		if(type != null){
+		strType = "&type=" + String.join("&type=", type);
+		searchType = "차종(" + String.join(", ", type)+ ") ";
+		} else {strType=""; searchType="";}
+		if(company != null){
+		strCompany = "&company=" + String.join("&company=", company);
+		searchCompany = "제조사(" + String.join(", ", company)+ ") ";
+		}else {strCompany=""; searchCompany="";}
+		if(fuel != null) {
+		strFuel = "&fuel=" + String.join("&fuel=",fuel);
+		searchFuel = "연료(" + String.join(", ", fuel)+ ") ";
+		} else {strFuel=""; searchFuel="";}
+		if(color != null) {
+		strColor = "&color=" + String.join("&color=", color);
+		searchColor = "색상(" + String.join(", ", color)+ ") ";
+		} else {strColor=""; searchColor="";}
+		
+		String stringQuery = (strType+strCompany+strFuel+strColor);
+		String stringSearch = (searchType + searchCompany + searchFuel + searchColor);
+		%>
+		
+		<p>선택조건 = <%=stringSearch%></p>
 		<table border="1">
 			<tr>
 				<th width=100px>차량번호</th>
@@ -306,7 +331,6 @@ for(int i = 0; i < bucket4.size(); i++){
 
 			<%
 			while (listResultSet.next()) {
-				int i = 0;
 				String car_number = listResultSet.getString("car_number");
 				String car_type = listResultSet.getString("car_type");
 				String car_name = listResultSet.getString("car_name");
@@ -320,7 +344,8 @@ for(int i = 0; i < bucket4.size(); i++){
 				request.setAttribute("PRICE", price);
 				request.setAttribute("DRIVEN", dis_driven);
 				request.setAttribute("YEAR", made_year);
-			%>
+				%>
+			
 			<tr>
 				<td width=100px><%=car_number%></td>
 				<td width=50px><%=car_type%></td>
@@ -341,7 +366,7 @@ for(int i = 0; i < bucket4.size(); i++){
 				<td width=70px><%=fuel_type%></td>
 				<td width=70px><%=colorlist%></td>
 				<form action="Wish_Buy_List.jsp" method="post">
-					<th width=70px><input type="hidden" name="carNumber" value="<%=car_number%>"> <input type="submit" value="구매하기" name="ddfde" /></th>
+					<th width=70px><input type="hidden" name="carNumber" value="<%=car_number%>"><input type="submit" value="구매하기" name="ddfde" /></th>
 				</form>
 			</tr>
 			<%
@@ -356,110 +381,22 @@ for(int i = 0; i < bucket4.size(); i++){
 			lastPage1++;
 		}
 		%>
-
-		</article>
 	</section>
 	<footer>
-	<p>현재 페이지 : <%=currentPage1%> / 전체 페이지 : <%=totalRowCount1/pagePerRow1%>
-	
+	<div>현재 페이지 : <%=currentPage1%> / 전체 페이지 : <%=totalRowCount1/pagePerRow1%><br>
 	<%
-	String strType, strCompany, strFuel, strColor = "";
-	
-	if(type != null){
-	strType = "&#38;type&#61;" + String.join("&#38;type&#61;", type);
-	} else {strType="";}
-	if(company != null){
-	strCompany = "&#38;company&#61;" + String.join("&#38;company&#61;", company);
-	}else {strCompany="";}
-	if(fuel != null) {
-	strFuel = "&#38;fuel&#61;" + String.join("&#38;fuel&#61;",fuel);
-	} else {strFuel="";}
-	if(color != null) {
-	strColor = "&#38color&#61;" + String.join("&#38color&#61;", color);
-	} else {strColor="";}
-	
-	String stringQuery = (strType+strCompany+strFuel+strColor);
-	
-	request.setAttribute("type", type);
-	request.setAttribute("company", company);
-	request.setAttribute("fuel", fuel);
-	request.setAttribute("color", color);
-	
 	if (currentPage1 > 1) {
 	%>
-	<form action="Board_Buy_Search.jsp?" method="get">
-		<input type="submit" value="이전">
-		<%
-		if(type != null){
-		%>
-			<input type="hidden" name="type" value=type>
-		<%
-		}
-		%>
-		<%
-		if(company != null){
-		%>
-			<input type="hidden" name="company" value=>
-		<%
-		}
-		%>
-		<%
-		if(fuel != null) {
-		%>
-			<input type="hidden" name="fuel" value=>
-		<%
-		}
-		%>
-		<%
-		if(color != null){
-		%>
-			<input type="hidden" name="color" value=<%=strColor%>>
-		<%
-		}
-		%>
-		<input type="hidden" name="currentPage" value=<%=currentPage1 - 1%>>		
-	</form>
+	<a href="<%=request.getContextPath()%>/Board_Buy_Search.jsp?<%=stringQuery%>&currentPage1=<%=currentPage1 - 1%>">이전</a>
 	<%
 	}
-	
-	if (currentPage1 < lastPage1) {
+	if (currentPage1 < lastPage1-1) {
 	%>
-		<form action="Board_Buy_Search.jsp?" method="get">
-		<input type="submit" value="다음">
-		<%
-		if(type != null){
-		%>
-			<input type="hidden" name="type" value="${param.type}">
-		<%
-		}
-		%>
-		<%
-		if(company != null){
-		%>
-			<input type="hidden" name="company" value="${param.company}">
-		<%
-		}
-		%>
-		<%
-		if(fuel != null){
-		%>
-			<input type="hidden" name="fuel" value=>
-		<%
-		}
-		%>
-		<%
-		if(color != null){
-		%>
-			<input type="hidden" name="color" value=>
-		<%
-		}
-		%>
-		<input type="hidden" name="currentPage" value=>		
-		</form>
+	<a href="<%=request.getContextPath()%>/Board_Buy_Search.jsp?<%=stringQuery%>&currentPage1=<%=currentPage1 + 1%>">다음</a>
 	<%
 	}
 	%>
-	</p>
+	</div>
 	</footer>
 	<%
 	} catch (Exception e) {
