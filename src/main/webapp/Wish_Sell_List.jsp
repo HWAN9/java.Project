@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="DAO.SellDAO" %>
+<%@ page import="DAO.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,16 +15,20 @@
 		String User_phone=request.getParameter("User_phone");
 		String User_mail=request.getParameter("User_mail");
 		
-		SellDAO dao  = new SellDAO();
+		DB_Connection db = new DB_Connection();
 		
-		dao.insertSellList(Car_number, User_name, User_phone, User_mail);
+		db.insertWishSellList(Car_number, User_name, User_phone, User_mail);
 		
 		out.println("구매차량 번호 :" + Car_number + "<br>");
 		out.println("이름 :" + User_name + "<br>");
 		out.println("연락처 :" + User_phone + "<br>");
 		out.println("이메일 :" + User_mail + "<br>");
 		
-		out.println("위 정보로 구매희망접수가 완료되었습니다.");
+		out.println("위 정보로 판매희망접수가 완료되었습니다.");	
 	%>
+	
+	<form action="Board_Main.jsp" method="post">
+		<input type="submit" value="초기화면으로" name="">
+	</form>
 </body>
 </html>
