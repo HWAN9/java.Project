@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.text.DecimalFormat"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,40 +22,38 @@ Buy_list {
 	justify-content: center;
 	align-item: center;
 }
-
 h1 {
 	font- =size: 25px;
 	padding-bottom: 20px;
 }
-
 .form {
 	width: 300px;
 }
-
 .form>div {
 	display: flex;
 	justify-content: center;
 	padding-bottom: 7px;
 	align-items: center;
 }
-
 label {
 	flex: 1;
 	text-align: left;
 }
-
 button {
 	width: 85px;
 	float: right;
 	padding: 3px;
 }
-
 input {
 	padding: 5px;
 }
 </style>
 </head>
 <body>
+
+<%
+DecimalFormat formatter = new DecimalFormat("###,###");
+%>
 
 	<div id="Buy_list">
 		<h1>
@@ -64,17 +63,18 @@ input {
 			구매차량 정보<br>
 			<%
 			request.setCharacterEncoding("UTF-8");
-			String number = request.getParameter("carname");
-			out.println("차량번호 : "+number);
+			String carNumber = request.getParameter("carNumber");
+			out.println("차량번호 : "+carNumber);
 			out.print("<br>");
-			String number2 = request.getParameter("carname2");
-			out.println("차량명 : "+number2);
+			String carName = request.getParameter("carName");
+			out.println("차량명 : "+carName);
 			out.print("<br>");
-			String number3 = request.getParameter("carname3");
-			out.println("제조사 : "+number3);
+			String company = request.getParameter("company");
+			out.println("제조사 : "+company);
 			out.print("<br>");
-			String number4 = request.getParameter("carname4");
-			out.println("가격 : "+number4+"만원");
+			String price = request.getParameter("price");
+			int intPrice = Integer.parseInt(price);
+			out.println("가격 : "+ formatter.format(intPrice)+"만원");
 		%>
 
 		</div>
@@ -99,8 +99,8 @@ input {
 					placeholder="shj0022@gmail.com" required>
 			</div>
 			
-			<input type="hidden" name="carname" value="<%=number%>">
-			<input type="submit" value="구매" name="ddfde"/></th>
+			<input type="hidden" name="carNumber" value="<%=carNumber%>">
+			<input type="submit" value="구매" name="">
 
 
 		</form>
