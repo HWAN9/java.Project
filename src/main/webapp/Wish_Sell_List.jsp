@@ -12,10 +12,14 @@
 		request.setCharacterEncoding("UTF-8");
 		String Car_number=request.getParameter("Car_number");
 		String User_name=request.getParameter("User_name");
-		String User_phone=request.getParameter("User_phone");
+		String User_phone1=request.getParameter("User_phone1");
+		String User_phone2=request.getParameter("User_phone2");
+		String User_phone3=request.getParameter("User_phone3");
 		String User_mail=request.getParameter("User_mail");
 		
 		DB_Connection db = new DB_Connection();
+		
+		String User_phone = User_phone1 + User_phone2 + User_phone3;
 		
 		db.insertWishSellList(Car_number, User_name, User_phone, User_mail);
 		
