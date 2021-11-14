@@ -73,6 +73,7 @@ String [] fuel = request.getParameterValues("fuel");
 String [] color = request.getParameterValues("color");
 
 DB_Connection sc = new DB_Connection();
+sc.truncateSearchList();
 
 ArrayList<SellVO> searchCarList = new ArrayList<SellVO>();
 ArrayList<SellVO> bucket1 = new ArrayList<SellVO>();
@@ -83,13 +84,13 @@ ArrayList<SellVO> bucket4 = new ArrayList<SellVO>();
 searchCarList = sc.searchCar();
 
 if(type == null){
-	for(int i=searchCarList.size()-1; i>=0 ; i--){
+	for(int i=0; i<searchCarList.size() ; i++){
 		bucket1.add(searchCarList.get(i));
 	}
 } else if(type != null) {
-	for(int i=searchCarList.size()-1; i>=0 ; i--){
+	for(int i=0; i<searchCarList.size() ; i++){
 		for(int j=0; j < type.length; j++){
-			if(searchCarList.get(i).getcar_type().contains(type[j])){
+			if(searchCarList.get(i).getcar_type().equals(type[j])){
 				bucket1.add(searchCarList.get(i));
 			}
 		}	
@@ -97,13 +98,13 @@ if(type == null){
 }
 
 if(company == null){
-	for(int i=bucket1.size()-1; i>=0 ; i--){
+	for(int i=0; i<bucket1.size() ; i++){
 		bucket2.add(bucket1.get(i));
 	}
 } else if(company != null) {
-	for(int i=bucket1.size()-1; i>=0 ; i--){
+	for(int i=0; i<bucket1.size() ; i++){
 		for(int j=0; j < company.length; j++){
-			if(bucket1.get(i).getmade_company().contains(company[j])){
+			if(bucket1.get(i).getmade_company().equals(company[j])){
 				bucket2.add(bucket1.get(i));
 			}
 		}	
@@ -111,13 +112,13 @@ if(company == null){
 }
 
 if(fuel == null){
-	for(int i=bucket2.size()-1; i>=0 ; i--){
+	for(int i=0; i<bucket2.size() ; i++){
 		bucket3.add(bucket2.get(i));
 	}
 } else if(fuel != null) {
-	for(int i=bucket2.size()-1; i>=0 ; i--){
+	for(int i=0; i<bucket2.size() ; i++){
 		for(int j=0; j < fuel.length; j++){
-			if(bucket2.get(i).getfuel_type().contains(fuel[j])){
+			if(bucket2.get(i).getfuel_type().equals(fuel[j])){
 				bucket3.add(bucket2.get(i));
 			}
 		}	
@@ -125,20 +126,19 @@ if(fuel == null){
 }
 
 if(color == null){
-	for(int i=bucket3.size()-1; i>=0 ; i--){
+	for(int i=0; i<bucket3.size() ; i++){
 		bucket4.add(bucket3.get(i));
 	}
 } else if(color != null) {
-	for(int i=bucket3.size()-1; i>=0 ; i--){
+	for(int i=0; i<bucket3.size() ; i++){
 		for(int j=0; j < color.length; j++){
-			if(bucket3.get(i).getcolor().contains(color[j])){
+			if(bucket3.get(i).getcolor().equals(color[j])){
 				bucket4.add(bucket3.get(i));
 			}
 		}	
 	}
 }
 
-sc.truncateSearchList();
 for(int i = 0; i < bucket4.size(); i++){
 	sc.insertSearchList(bucket4.get(i).getcar_number(), bucket4.get(i).getcar_type(), bucket4.get(i).getcar_name(), bucket4.get(i).getmade_company(),
 			bucket4.get(i).getprice(), bucket4.get(i).getmade_year(), bucket4.get(i).getdis_driven(), bucket4.get(i).getfuel_type(), bucket4.get(i).getcolor());
