@@ -11,53 +11,45 @@
 <title>Insert title here</title>
 <style>
 header {
-	background-color: #FFD9EC;
-	width: 1800px;
+	background-color: #FFDEAD;
+	width:1800px;
 	height: 100px;
 }
-
 nav {
-	background-color: #339999;
-	color: white;
+	background-color: #FFE4B5;
+	color: black;
 	width: 200px;
 	height: 900px;
 	float: left;
 }
-
 section {
-	width: 1200px;
+	width: 1600px;
 	text-align: left;
 	float: left;
 	padding: 10px;
 }
-
 footer {
-	background-color: #FF6347;
+	
+	width:1800px;
 	height: 100px;
-	width: 1800px;
 	clear: both;
 }
-
-header, nav, footer {
+ header, nav, footer {
 	text-align: center;
 }
-
 header, footer {
 	line-height: 100px;
 }
 
-nav {
-	
-}
-
 table {
-	width: 1500px
+	width: 1600px;
+}
+table,th,td{
+border:1px solid black;
+border-collapse:collapse;
 }
 
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-}
+
 </style>
 </head>
 <body>
