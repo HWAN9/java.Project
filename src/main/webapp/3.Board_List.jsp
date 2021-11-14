@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 body {
@@ -46,9 +46,9 @@ table {
 </style>
 </head>
 <body>
-	<h1>HOCAR Â÷·®°ü¸®</h1>
+	<h1>HOCAR ì°¨ëŸ‰ê´€ë¦¬</h1>
 	<header>
-		<h1>µî·ÏµÈ Â÷·® ÇöÈ²</h1>
+		<h1>ë“±ë¡ëœ ì°¨ëŸ‰ í˜„í™©</h1>
 	</header>
 	<section>
 		<%
@@ -91,15 +91,15 @@ table {
 		%>
 		<table border="1">
 			<thead>
-				<th>Â÷·®¹øÈ£</th>
-				<th>Â÷Á¾</th>
-				<th>Â÷·®¸í</th>
-				<th>Á¦Á¶»ç</th>
-				<th>°¡°İ(¿ø)</th>
-				<th>¿¬½Ä</th>
-				<th>ÁÖÇà°Å¸®(km)</th>
-				<th>¿¬·áÁ¾·ù</th>
-				<th>»ö»ó</th>
+				<th>ì°¨ëŸ‰ë²ˆí˜¸</th>
+				<th>ì°¨ì¢…</th>
+				<th>ì°¨ëŸ‰ëª…</th>
+				<th>ì œì¡°ì‚¬</th>
+				<th>ê°€ê²©(ì›)</th>
+				<th>ì—°ì‹</th>
+				<th>ì£¼í–‰ê±°ë¦¬(km)</th>
+				<th>ì—°ë£Œì¢…ë¥˜</th>
+				<th>ìƒ‰ìƒ</th>
 			</thead>
 			<tbody>
 				<%
@@ -122,7 +122,7 @@ table {
 			</tbody>
 		</table>
 		<div>
-			<br> ÇöÀç ÆäÀÌÁö:
+			<br> í˜„ì¬ í˜ì´ì§€:
 			<%=currentPage%></div>
 		<%
 		int lastPage = totalRowCount / pagePerRow;
@@ -135,26 +135,26 @@ table {
 			if (currentPage > 1) {
 			%>
 			<a
-				href="<%=request.getContextPath()%>/3.Board_List.jsp?currentPage=<%=currentPage - 1%>">ÀÌÀü</a>
+				href="<%=request.getContextPath()%>/3.Board_List.jsp?currentPage=<%=currentPage - 1%>">ì´ì „</a>
 			<%
 			}
 			if (currentPage < lastPage) {
 			%>
 			<a
-				href="<%=request.getContextPath()%>/3.Board_List.jsp?currentPage=<%=currentPage + 1%>">´ÙÀ½</a>
+				href="<%=request.getContextPath()%>/3.Board_List.jsp?currentPage=<%=currentPage + 1%>">ë‹¤ìŒ</a>
 			<%
 			}
 			%>
 		</div>
 	</section>
 	<aside>
-		<p>Â÷·®°ü¸®</p>
+		<p>ì°¨ëŸ‰ê´€ë¦¬</p>
 		<div>
-			<a href="<%=request.getContextPath()%>/ÆäÀÌÁö.jsp">°Ô½Ã±ÛÀÔ·Â</a>
+			<a href="<%=request.getContextPath()%>/í˜ì´ì§€.jsp">ê²Œì‹œê¸€ì…ë ¥</a>
 		</div>
 	</aside>
 	<footer>
-		<p>ÆäÀÌÁö ³Ñ¹ö ¹× ±âÅ¸ ±¸¼º</p>
+		<p>í˜ì´ì§€ ë„˜ë²„ ë° ê¸°íƒ€ êµ¬ì„±</p>
 
 	</footer>
 	<%
