@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.text.DecimalFormat"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="DTO.*" %>
+<%@ page import="DAO.*" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,28 +79,41 @@ DecimalFormat formatter = new DecimalFormat("###,###");
 			String price = request.getParameter("price");
 			int intPrice = Integer.parseInt(price);
 			out.println("가격 : "+ formatter.format(intPrice)+"만원");
+			
+			String id = String.valueOf(session.getAttribute("id"));
+			
+			userDao userDao = new userDao();
+			
+			ArrayList<userVo> userDtos = new ArrayList<userVo>();
+					
+			userDtos = userDao.getIDInfo(id);
+			
+			String userName = userDtos.get(0).getName();
+			String userPhone = userDtos.get(0).getPhone_num();
+			String userEmail = userDtos.get(0).getEmail();
+			String userEmail2 = userDtos.get(0).getEmail2();
+		
 		%>
 
 		</div>
 		<br>
-
-
+		
 		<form action="Wish_Buy_List.jsp" method="post" class="form">
 			<div>
 				<label>이름</label> <input type="text" name="User_name"
-					placeholder="김민수" required>
+					value="<%=userName%>" required>
 			</div>
-
+			
 			<div>
 				<label>연락처</label> <input type="text" name="User_phone1"
-					placeholder=010 required size=3 maxlength=3> &nbsp; <input
-					type="text" name="User_phone2" placeholder=1234 required size=4
+					value="<%=userPhone.substring(0, 3)%>"required size=3 maxlength=3> &nbsp; <input
+					type="text" name="User_phone2" value="<%=userPhone.substring(4, 8)%>" required size=4
 					maxlength=4> &nbsp; <input type="text" name="User_phone3"
-					placeholder=5678 required size=4 maxlength=4><br>
+					value="<%=userPhone.substring(9, 13)%>" required size=4 maxlength=4><br>
 			</div>
 			<div>
 				<label>이메일</label> <input type="text" name="User_mail"
-					placeholder="shj0022@gmail.com" required>
+					value="<%=userEmail%>@<%=userEmail2%>" required>
 			</div>
 			
 			<input type="hidden" name="carNumber" value="<%=carNumber%>">
