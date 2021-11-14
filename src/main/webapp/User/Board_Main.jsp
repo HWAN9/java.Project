@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>중고차는 역시 호카!</title>
 <style>
 header {
 	background-color: #FFDEAD;
