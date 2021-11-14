@@ -16,7 +16,7 @@
 		String User_phone2 = request.getParameter("User_phone2");
 		String User_phone3 = request.getParameter("User_phone3");
 		String User_mail = request.getParameter("User_mail");
-		String id = request.getParameter("id");
+		String id = String.valueOf(session.getAttribute("id"));
 		String carNumber = request.getParameter("carNumber");
 		
 		String phoneNum = User_phone1 + "-" + User_phone2 + "-" +User_phone3;
