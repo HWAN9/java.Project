@@ -17,6 +17,8 @@
 		String User_phone3=request.getParameter("User_phone3");
 		String User_mail=request.getParameter("User_mail");
 		
+		String id = String.valueOf(session.getAttribute("id"));
+		
 		DB_Connection db = new DB_Connection();
 		
 		String User_phone = User_phone1 + User_phone2 + User_phone3;
