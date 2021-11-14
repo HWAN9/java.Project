@@ -365,14 +365,21 @@ for(int i = 0; i < bucket4.size(); i++){
 				</td>
 				<td width=70px><%=fuel_type%></td>
 				<td width=70px><%=colorlist%></td>
-				<form action="Wish_Buy_List.jsp" method="post">
-					<th width=70px><input type="hidden" name="carNumber" value="<%=car_number%>"><input type="submit" value="구매하기" name="ddfde" /></th>
+				<td>
+				<form action="Board_Buy_Page.jsp" method="post">
+					<input type="hidden" name="carNumber" value="<%=car_number%>">
+					<input type="hidden" name="carName" value="<%=car_name%>">
+					<input type="hidden" name="company" value="<%=made_company%>">
+					<input type="hidden" name="price" value="<%=price%>">
+					<input type="submit" value="구매하기" name="">
 				</form>
+				</td>
+				<%
+				}
+				%>
 			</tr>
-			<%
-			}
-			%>
 		</table>
+
 
 		<%
 		
