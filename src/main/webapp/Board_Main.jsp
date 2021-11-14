@@ -16,7 +16,7 @@ width:350px;
 <body>
 <img src="hocar.PNG"><br>
 
-<form ACTION="Board_Buy_Page.jsp">
+<form ACTION="Board_Buy.jsp">
 <button>구매</button>
 </form>
 
