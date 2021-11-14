@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>중고는 역시 호카!</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<br>
@@ -19,7 +19,7 @@
 		String id = request.getParameter("id");
 		String carNumber = request.getParameter("carNumber");
 		
-		String phoneNum = User_phone1 + User_phone2 + User_phone3;
+		String phoneNum = User_phone1 + "-" + User_phone2 + "-" +User_phone3;
 		
 		DB_Connection sc = new DB_Connection();
 		
